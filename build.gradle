@@ -1,0 +1,31 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+def slf4jVersion = "1.7.32"
+
+dependencies {
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter:5.8.1',
+            'io.rest-assured:rest-assured:5.3.0',
+            'io.rest-assured:json-schema-validator:5.3.0',
+            'org.assertj:assertj-core:3.24.2',
+            'com.codeborne:selenide:6.11.0'
+    )
+}
+
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+    useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+            exceptionFormat "short"
+        }
+    }
+}
