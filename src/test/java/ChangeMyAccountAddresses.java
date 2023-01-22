@@ -1,11 +1,7 @@
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
 
 import java.util.HashMap;
 import java.util.Map;
