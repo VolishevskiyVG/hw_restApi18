@@ -19,7 +19,6 @@ public class ChangeMyAccountAddresses {
     @BeforeAll
     public static void setUp() {
         RestAssured.baseURI = "https://demowebshop.tricentis.com";
-        Configuration.baseUrl = "https://demowebshop.tricentis.com/";
     }
 
 
